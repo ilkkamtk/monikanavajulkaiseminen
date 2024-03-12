@@ -167,8 +167,48 @@
       echo $txt1 . $txt2;
       ?>
       ```
+- Multiline strings can be created using the `heredoc` syntax or the `nowdoc` syntax.
+    - Heredoc syntax:
+      ```php
+      <?php
+      $txt = <<<EOT
+      The quick brown fox
+      jumps over the lazy dog.
+      EOT;
+      echo $txt;
+      ?>
+      ```
+    - Nowdoc syntax:
+      ```php
+      <?php
+      $txt = <<<'EOT'
+      The quick brown fox
+      jumps over the lazy dog.
+      EOT;
+      echo $txt;
+      ?>
+      ```
 
----
+### String functions
+
+- PHP has a large number of built-in functions to work with strings.
+- Example:
+    ```php
+    <?php
+    $str = "Hello world!";
+    echo substr($str, 6); // outputs "world!"
+    echo strlen($str); // outputs 12
+    echo strpos($str, "world"); // outputs 6
+    echo str_replace("world", "Dolly", $str); // outputs "Hello Dolly!"
+    ?>
+    ```
+    - The `substr()` function returns a part of a string.
+    - The `strlen()` function returns the length of a string.
+    - The `strpos()` function searches for a specific text within a string. If a match is found, the function returns
+      the
+      character position of the first match. If no match is found, it will return `false`.
+    - The `str_replace()` function replaces some characters with some other characters in a string.
+    - There are many more string functions in PHP.
 
 ## PHP Constants
 
@@ -197,7 +237,7 @@
 - PHP has mostly the same operators as JavaScript, Python, etc. The main difference is the concatenation operator `.`
   and the
   spaceship operator `<=>`.
-    - Concatenation is used to combine two strings.
+    - Concatenation is used to combine strings.
     - The spaceship operator is used to compare two expressions. It returns -1, 0, or 1 when `$a` is less than, equal
       to, or
       greater than `$b`. Example:
@@ -332,12 +372,12 @@
     - Simple arrays with numeric keys like in JavaScript.
 - Associative arrays
     - Arrays with named keys like in JavaScript objects or Python dictionaries.
-      Example: `$age = ["Peter" => "35", "Ben" => "37", "Joe" => "43"];`
+      Example: `$person = ["name" => "John", "age" => 30, "city" => "New York"];`
     - Accessing values in associative arrays:
       ```php
       <?php
-      $age = ["Peter" => "35", "Ben" => "37", "Joe" => "43"];
-      echo "Peter is " . $age['Peter'] . " years old.";
+      $person = ["name" => "John", "age" => 30, "city" => "New York"];
+        echo "Name: " . $person["name"] . ", Age: " . $person["age"] . ", City: " . $person["city"];
       ?>
       ```
 - Multidimensional arrays.
@@ -421,18 +461,18 @@
 - Example with associative arrays:
   ```php
   <?php
-  $age = ["Peter" => "35", "Ben" => "37", "Joe" => "43"];
-  foreach ($age as $key => $val) {
-      echo "Key=" . $key . ", Value=" . $val;
-  }
+    $person = ["name" => "John", "age" => 30, "city" => "New York"];
+    foreach ($person as $key => $value) {
+        echo "Key=$key, Value=$value <br>";
+    }
   ?>
   ```
     - Key is the property name and val is the property value.
     - The output will be:
       ```
-      Key=Peter, Value=35
-      Key=Ben, Value=37
-      Key=Joe, Value=43
+      Key=name, Value=John
+      Key=age, Value=30
+      Key=city, Value=New York
       ```
 
 ### Working with JSON
@@ -445,7 +485,7 @@
       "age" => 30,
       "city" => "New York"
   ];
-  echo json_encode($age);
+  echo json_encode($person);
   ?>
   ```
     - The output will be:
@@ -479,3 +519,7 @@
             [city] => New York
         )
         ```
+    - The difference between objects and associative arrays is that objects are accessed using the `->` operator and
+      associative arrays are accessed using the `[]` operator.
+    - Objects can also include methods (functions) and properties (variables) while associative arrays can only include
+      properties.

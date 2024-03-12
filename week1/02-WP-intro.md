@@ -120,3 +120,28 @@ testing the update on a development environment.
 ## Wordpress Settings
 
 - Video: [WordPress Settings](https://metropoliafi-my.sharepoint.com/:v:/g/personal/ilkkamtk_metropolia_fi/ETRDffBPuydIiNgMcxoKjh4B5tFTx96C46yp2PJPNEexkw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=MCEsuX)
+
+---
+
+## Wordpress plugins
+
+WordPress plugins are used to extend the functionality of your website. There are thousands of free and paid plugins available. For example, you can use plugins to add contact forms, galleries, sliders, e-commerce, SEO, etc.
+
+You can install and activate plugins from the admin panel.
+
+### SSH Updater Plugin
+
+On Metropolia's server you can't update your WordPress installation or install plugins from the admin panel. You need to use SSH to update your WordPress installation and install plugins. You can use the SSH Updater plugin to update your WordPress installation and install plugins.
+
+- Download the plugin from https://wordpress.org/plugins/ssh-sftp-updater-support/
+- Unzip the downloaded file and move the `ssh-sftp-updater-support` folder to the `wp-content/plugins` folder
+- Activate the plugin from the admin panel / plugins
+
+---
+
+## Assignment
+
+1. Remove the default content and defulat plugins from your WordPress installation.
+2. Add `ssh-sftp-updater-support` plugin to your WordPress installation.
+3. Add a new page to your WordPress installation. The page should have a title and some text content.
+4. Set the page as the front page of your WordPress installation.
