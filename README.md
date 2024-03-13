@@ -11,12 +11,12 @@
 ### Week 2
 
 - [WordPress Theme Development 2](week2/01-theme-dev-2.md)
-- PHP - Accessing HTTP data, Form handling
-- PHP - Cookies and Sessions
+- [PHP - Accessing HTTP data, Form handling, Cookies, Sessions](week2/02-http-forms.md)
+- PHP - Database PDO
 
 ### Week 3
 
-- PHP - Database PDO
+- PHP - Practical examples 
 - PHP - Object-Oriented PHP
 - PHP - Types, Security
 

@@ -46,7 +46,7 @@
   order. In websites, posts are used for dynamic content that is updated often like news, articles, products, etc.
 - **Category** - A way to group posts that are related to each other. It is a method to organize content.
 - **Tag** - A keyword that is used to describe
-  the content of a post. 
+  the content of a post.
 - **Theme** - A collection of templates and stylesheets used to define the appearance and display of a WordPress powered
   website.
 - **Template** - A file that controls the layout of a WordPress website. It is a file that is used to generate the final
@@ -103,20 +103,21 @@ testing the update on a development environment.
 ---
 
 ## Uploads on Metropolia's server
-  - `.htaccess` on Metropolia's server to allow file uploads:
 
-    - You need to create a `.htaccess` file with a proper editor (like Visual Studio Code, etc.)
+- `.htaccess` on Metropolia's server to allow file uploads:
 
-      ```apacheconfig
-      AddHandler cgi-script .php
-      ```
+  - You need to create a `.htaccess` file with a proper editor (like Visual Studio Code, etc.)
 
-    - Save the file and upload it to the root folder of your WordPress installation.
-    - Change the file permissions to 755:
-      - Open shell access with your terminal: `ssh username@shell.metropolia.fi`
-      - Navigate to your public folder: `cd public_html`
-      - Change the permissions of all files in your WordPress installation: `chmod -R 755 *` so that the server
-        can read and execute the files.
+    ```apacheconfig
+    AddHandler cgi-script .php
+    ```
+
+  - Save the file and upload it to the root folder of your WordPress installation.
+  - Change the file permissions to 755:
+    - Open shell access with your terminal: `ssh username@shell.metropolia.fi`
+    - Navigate to your public folder: `cd public_html`
+    - Change the permissions of all files in your WordPress installation: `chmod -R 755 *` so that the server
+      can read and execute the files.
 
 ---
 
@@ -136,7 +137,7 @@ You can install and activate plugins from the admin panel.
 
 On Metropolia's server you can't update your WordPress installation or install plugins from the admin panel. You need to use SSH to update your WordPress installation and install plugins. You can use the SSH Updater plugin to update your WordPress installation and install plugins.
 
-- Download the plugin from https://wordpress.org/plugins/ssh-sftp-updater-support/
+- Download the plugin from <https://wordpress.org/plugins/ssh-sftp-updater-support/>
 - Unzip the downloaded file and move the `ssh-sftp-updater-support` folder to the `wp-content/plugins` folder
 - Activate the plugin from the admin panel / plugins
 
@@ -149,5 +150,3 @@ On Metropolia's server you can't update your WordPress installation or install p
 3. Add two new pages 'Home' and 'About Us' to your WordPress installation. The pages should have a title and some text content.
 4. Set the 'Home' page as the front page of your WordPress installation in the reading settings.
 5. Open the front page of your WordPress site and check that everything works.
-
-
