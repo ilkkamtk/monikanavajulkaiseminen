@@ -17,12 +17,12 @@
 ### Week 3
 
 - [PHP - Practical exercise](week3/01-pracical-assignment.md) 
-- PHP - Object-Oriented PHP
-- PHP - Types, Security
+- PHP - OOP
+- PHP - Authentication and Authorization
 
 ### Week 4
 
-- PHP - REST API
+- PHP - Security
 - WordPress custom database queries
 
 ### Week 5
