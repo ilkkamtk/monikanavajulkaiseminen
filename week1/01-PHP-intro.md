@@ -1,5 +1,7 @@
 # PHP - Hypertext Preprocessor
 
+## Javascript Is Great Until You See The PHP Guys With Lambos
+
 - A server-side scripting language designed for web development. First appeared in 1995.
 - PHP code is executed on the server, and the result is returned to the browser as plain HTML.
 - PHP can be embedded into HTML code, or it can be used in combination with various web template systems, web content
