@@ -2,7 +2,7 @@
 
 ## Javascript Is Great Until You See The PHP Guys With Lambos
 
-![https://pbs.twimg.com/media/FUp_K8QWIAEWKzR?format=jpg&name=4096x4096]
+![lambo](https://pbs.twimg.com/media/FUp_K8QWIAEWKzR?format=jpg&name=4096x4096)
 
 - A server-side scripting language designed for web development. First appeared in 1995.
 - PHP code is executed on the server, and the result is returned to the browser as plain HTML.
