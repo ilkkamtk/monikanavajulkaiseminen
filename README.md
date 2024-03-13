@@ -4,25 +4,25 @@
 
 ### Week 1
 
-- PHP Intro
+- PHP - Intro
 - WordPress Intro
 - WordPress Theme Development
 
 ### Week 2
 
-- PHP Intro
-- Accessing HTTP data, Form handling
-- Cookies and Sessions
+- WordPress Theme Development 2
+- PHP - Accessing HTTP data, Form handling
+- PHP - Cookies and Sessions
 
 ### Week 3
 
-- Database PDO
-- Object-Oriented PHP
-- Types, Security
+- PHP - Database PDO
+- PHP - Object-Oriented PHP
+- PHP - Types, Security
 
 ### Week 4
 
-- PHP REST API
+- PHP - REST API
 - WordPress custom database queries
 
 ### Week 5

@@ -44,6 +44,9 @@
   websites, pages are used for static content that is not updated often like "About us", "Contact us", etc.
 - **Post** - A blog post that is part of the blog feed. It is affected by time and is displayed in reverse chronological
   order. In websites, posts are used for dynamic content that is updated often like news, articles, products, etc.
+- **Category** - A way to group posts that are related to each other. It is a method to organize content.
+- **Tag** - A keyword that is used to describe
+  the content of a post. 
 - **Theme** - A collection of templates and stylesheets used to define the appearance and display of a WordPress powered
   website.
 - **Template** - A file that controls the layout of a WordPress website. It is a file that is used to generate the final
@@ -141,7 +144,10 @@ On Metropolia's server you can't update your WordPress installation or install p
 
 ## Assignment
 
-1. Remove the default content and defulat plugins from your WordPress installation.
+1. Remove the default content and default plugins from your WordPress installation.
 2. Add `ssh-sftp-updater-support` plugin to your WordPress installation.
-3. Add a new page to your WordPress installation. The page should have a title and some text content.
-4. Set the page as the front page of your WordPress installation.
+3. Add two new pages 'Home' and 'About Us' to your WordPress installation. The pages should have a title and some text content.
+4. Set the 'Home' page as the front page of your WordPress installation in the reading settings.
+5. Open the front page of your WordPress site and check that everything works.
+
+
