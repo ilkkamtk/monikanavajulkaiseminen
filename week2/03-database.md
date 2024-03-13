@@ -151,3 +151,142 @@ Prepared statement in MySQL represents a SQL statement template to be executed. 
   ```
 
 ---
+
+### Updating data with prepared statements
+
+```php
+<?php
+// updateData.php
+
+require 'dbConnect.php';
+
+$id = 1;
+
+$name = 'John';
+$email = 'john@metropolia.fi';
+$age = 26;
+
+$sql = "UPDATE users SET name = :name, email = :email, age = :age WHERE id = :id";
+
+$data = array('id' => $id, 'name' => $name, 'email' => $email, 'age' => $age);
+
+try {
+  $STH = $DBH->prepare($sql);
+  $STH->execute($data);
+} catch(PDOException $e) {
+  echo "Could not update data in the database.";
+  file_put_contents('PDOErrors.txt', 'updateData.php - ' . $e->getMessage(), FILE_APPEND);
+}
+
+?>
+```
+
+---
+
+### Selecting data with FETCH_ASSOC
+
+```php
+<?php
+// selectData.php
+
+require 'dbConnect.php';
+
+$sql = "SELECT * FROM users";
+
+try {
+  $STH = $DBH->query($sql);
+  $STH->setFetchMode(PDO::FETCH_ASSOC);
+  while($row = $STH->fetch()) {
+    echo "Name: " . $row['name'] . "<br>";
+    echo "Email: " . $row['email'] . "<br>";
+    echo "Age: " . $row['age'] . "<br>";
+  }
+} catch(PDOException $e) {
+  echo "Could not select data from the database.";
+  file_put_contents('PDOErrors.txt', 'selectData.php - ' . $e->getMessage(), FILE_APPEND);
+}
+
+?>
+```
+
+---
+
+### Selecting data with FETCH_OBJ
+
+```php
+<?php
+// selectData.php
+
+require 'dbConnect.php';
+
+$sql = "SELECT * FROM users";
+
+try {
+  $STH = $DBH->query($sql);
+  $STH->setFetchMode(PDO::FETCH_OBJ);
+  while($row = $STH->fetch()) {
+    echo "Name: " . $row->name . "<br>";
+    echo "Email: " . $row->email . "<br>";
+    echo "Age: " . $row->age . "<br>";
+  }
+} catch(PDOException $e) {
+  echo "Could not select data from the database.";
+  file_put_contents('PDOErrors.txt', 'selectData.php - ' . $e->getMessage(), FILE_APPEND);
+}
+
+?>
+```
+
+---
+
+### Deleting data
+
+```php
+<?php
+// deleteData.php
+
+require 'dbConnect.php';
+
+$id = 1;
+
+$sql = "DELETE FROM users WHERE id = :id";
+
+$data = array('id' => $id);
+
+try {
+  $STH = $DBH->prepare($sql);
+  $STH->execute($data);
+} catch(PDOException $e) {
+  echo "Could not delete data from the database.";
+  file_put_contents('PDOErrors.txt', 'deleteData.php - ' . $e->getMessage(), FILE_APPEND);
+}
+
+?>
+```
+
+---
+
+### Closing the connection
+In most web application scenarios, where scripts are short-lived and terminate after sending the response to the browser, closing the connection manually is not necessary. PHP will automatically close the connection when the script ends.
+
+However, this is how you would do it:
+```php
+<?php
+
+$DBH = null;
+
+?>
+```
+
+---
+
+### Assignment
+Use the `MediaItems` table from the previous course and create a PHP application that allows you to insert, update, select, and delete records from the table using PDO and prepared statements.
+
+You need a form for inserting and updating records and a html table for selecting and deleting records.
+
+Start by creating the html table and the form for inserting records. Then create the PHP scripts for inserting and selecting records. After that, create the form for updating records and the PHP script for updating records. Finally, create the PHP script for deleting records.
+
+Use existing user_id and hard code into the form as a hidden field for inserting, updating and deleting records. Also add a couple existing filenames to the form as a dropdown list, so you don't have to manually input the filenames every time.
+
+---
