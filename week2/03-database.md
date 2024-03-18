@@ -40,6 +40,8 @@ $password = '';
 ?>
 ```
 
+In production the correct location for config files is outside the web root. This is to prevent unauthorized access to the database credentials. In labs, we can use the root folder of the project.
+
 ```php
 <?php
 // dbConnect.php
@@ -228,6 +230,38 @@ try {
     echo "Name: " . $row->name . "<br>";
     echo "Email: " . $row->email . "<br>";
     echo "Age: " . $row->age . "<br>";
+  }
+} catch(PDOException $e) {
+  echo "Could not select data from the database.";
+  file_put_contents('PDOErrors.txt', 'selectData.php - ' . $e->getMessage(), FILE_APPEND);
+}
+
+?>
+```
+
+---
+
+### bindParam()
+
+```php
+<?php
+// selectData.php
+
+require 'dbConnect.php';
+
+$name = 'John';
+
+$sql = "SELECT * FROM users WHERE name = :name";
+
+try {
+  $STH = $DBH->prepare($sql);
+  $STH->bindParam(':name', $name);
+  $STH->execute();
+  $STH->setFetchMode(PDO::FETCH_ASSOC);
+  while($row = $STH->fetch()) {
+    echo "Name: " . $row['name'] . "<br>";
+    echo "Email: " . $row['email'] . "<br>";
+    echo "Age: " . $row['age'] . "<br>";
   }
 } catch(PDOException $e) {
   echo "Could not select data from the database.";
