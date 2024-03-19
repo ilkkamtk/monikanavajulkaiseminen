@@ -118,7 +118,7 @@
 
   ```php
   <?php
-  $x = 5; // global scope
+  $x = 5;
   function myTest() {
       $y = 10; // local scope
       echo "<p>Variable x inside function is: $x</p>";
