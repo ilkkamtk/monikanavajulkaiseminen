@@ -130,9 +130,9 @@ wp_reset_postdata();
 
 ## Assignment 2 - Template files
 
-1. Download this Zip file: [template-files.zip](template-files.zip) and extract the contents somewhere convenient but
+1. Download 'leiska.zip' from Oma and extract the contents somewhere convenient but
    not in your WordPress installation.
-   - The zip file contains `index.html` and `style.css` files and `images` folder with images.
+   - The zip file contains `index.html` and `style.css` files and some images.
 2. Create `index.php` file in your theme folder and copy the content of `index.html` to `index.php`.
 3. Also copy the `images` folder to your theme folder and the content of `style.css` to your `style.css` file.
 4. Create `header.php`, `footer.php` and `sidebar.php` files in your theme folder and move the elements you think are
