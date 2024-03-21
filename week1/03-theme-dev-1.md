@@ -252,7 +252,7 @@ wp_reset_postdata();
 
 ---
 
-Assignment 5 - Main Menu
+## Assignment 5 - Main Menu
 
 1. Add a new category and sub categories to your WordPress installation:
    - Products
