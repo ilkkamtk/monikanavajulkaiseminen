@@ -250,7 +250,7 @@ Server side languages like PHP provide several methods to maintain state:
   - Remember me (checkbox)
   - Submit button
 - When the form is submitted, check if the "Remember me" checkbox is checked. If it is, create a cookie that stores the username. If it is not, delete the cookie.
-- When the page is loaded, check if the cookie is set. If it is, fill in the username field with the value from the cookie.
+- When the page is loaded, check if the cookie is set. If it is, add the username from the cookie to input field's value. Also set the checkbox to checked.
 - Use the same file for the form and the script.
 
 ---
