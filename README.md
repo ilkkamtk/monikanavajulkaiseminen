@@ -17,12 +17,13 @@
 ### Week 3
 
 - [PHP - Practical exercise](week3/01-pracical-assignment.md) 
-- PHP - OOP
-- PHP - Authentication and Authorization
+- [PHP - Authentication and Authorization](week3/02-auth.md)
+- [PHP - OOP](week3/03-oop.md)
+
 
 ### Week 4
 
-- PHP - Security
+- [PHP - Security](week4/01-security.md)
 - WordPress custom database queries
 
 ### Week 5

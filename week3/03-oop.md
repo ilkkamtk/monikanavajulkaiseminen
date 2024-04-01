@@ -2,7 +2,7 @@
 
 ## Object oriented programming
 
-Object oriented programming (OOP) is a programming paradigm that uses objects and classes. It is based on the concept of "objects", which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods).
+Object-oriented programming (OOP) is a programming paradigm that uses objects and classes. It is based on the concept of "objects", which can contain data and code: data in the form of fields (often known as attributes or properties), and code, in the form of procedures (often known as methods).
 
 ### Classes and objects
 
@@ -331,4 +331,8 @@ Using namespaces can help you organize your code and avoid conflicts with other 
 - Inheritance is a mechanism in which one class acquires the properties and behaviors of another class
 
 ---
+
+## Assignment
+
+Convert the previous assignment to use classes and objects. Create a class for handling database operations with PDO. Create a class for handling media item and user operations. Use namespaces to organize your code.
 

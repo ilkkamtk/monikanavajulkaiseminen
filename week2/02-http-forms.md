@@ -265,6 +265,7 @@ Server side languages like PHP provide several methods to maintain state:
   - This ID is used to retrieve the data linked to the user in the server
 - When a user accesses your site, PHP will check whether a specific session id has been sent with the request. If so, the prior saved environment with the registered variables is recreated (=session is maintained). If not, a new session is created.
 - Session variables are accessible through the `$_SESSION` superglobal
+- Datatypes that can be stored in session variables are the same as for any other PHP variables like strings, arrays, objects, etc.
 - Example:
 
   ```php
