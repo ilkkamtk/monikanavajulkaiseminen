@@ -19,7 +19,6 @@ To upload files in PHP, you need to use the `$_FILES` superglobal. The `$_FILES`
 - `$_FILES['file']['type']`: The MIME type of the file, if the browser provided this information.
 - `$_FILES['file']['size']`: The size, in bytes, of the uploaded file.
 - `$_FILES['file']['tmp_name']`: The temporary filename of the file in which the uploaded file was stored on the server.
-- `$_FILES['file']['error']`: The error code associated with this file upload.
 - `$_FILES['file']['error']` is an integer that corresponds to one of the predefined error codes.
 
 Here is an example of a simple file upload form:
