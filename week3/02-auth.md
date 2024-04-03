@@ -55,17 +55,14 @@ global $DBH;
 require_once __DIR__ . '/dbConnect.php';
 
 if (isset($_POST['username']) && isset($_POST['password'])) {
-    // hash password
-    $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-    $sql = "SELECT * FROM users WHERE username = :username AND password = :password";
+    $sql = "SELECT * FROM Users WHERE username = :username";
     $data = [
         'username' => $_POST['username'],
-        'password' => $password
     ];
     $STH = $DBH->prepare($sql);
     $STH->execute($data);
     $user = $STH->fetch(PDO::FETCH_ASSOC);
-    if ($user) {
+    if ($user && password_verify($_POST['password'], $user['password'])) {
         $_SESSION['user'] = $user;
         // redirect to secret page
         header('Location: secret.php');
