@@ -28,13 +28,13 @@
 
 ### Week 5
 
-- WordPress AJAX
-- WordPress security
+- [WordPress AJAX](week5/01-wp-ajax.md)
+- [WordPress security](week5/02-wp-security.md)
 
 ### Week 6
 
-- Adobe After Effects
+- [Adobe After Effects](https://oma.metropolia.fi)
 
 ### Week 7
 
-- Bodymovin
+- [Bodymovin](https://oma.metropolia.fi)
