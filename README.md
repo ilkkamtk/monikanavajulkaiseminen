@@ -24,7 +24,7 @@
 ### Week 4
 
 - [PHP - Security](week4/01-security.md)
-- WordPress custom database queries
+- [WordPress custom database queries](week4/02-wp-custom-db.md)
 
 ### Week 5
 
