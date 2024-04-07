@@ -274,6 +274,8 @@ class User {
 
 namespace MediaProject;
 
+require 'userClass.php';
+
 class UserDatabaseOps {
     private $DBH;
     
@@ -304,11 +306,7 @@ Usage:
 
 require 'dbConnect.php';
 
-require 'userClass.php';
 require 'userDatabaseOps.php';
-
-use MediaProject\User;
-use MediaProject\UserDatabaseOps;
 
 $userOps = new UserDatabaseOps($DBH);
 $user = $userOps->getUserById(1);

