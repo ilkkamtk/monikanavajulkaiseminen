@@ -193,7 +193,7 @@ However, if you are not making a plugin and just want to create a table, you can
 
 Here is an example of a simple plugin that adds a like button to posts with shortcode. It sends the data with a form and adds the like to the database without JavaScript.
 
-Save the following to a file called `like-button.php` in the `wp-content/plugins` directory:
+Save the following to a file called `like-button.php` in the `wp-content/plugins/like-button` directory:
 
 ```php
 <?php
