@@ -100,7 +100,6 @@ and [iThemes Security](https://wordpress.org/plugins/better-wp-security/).
 
     ```php
     <?php
-        session_start();
         if ( ! isset( $_POST['mytheme_form_nonce'] ) || ! wp_verify_nonce( $_POST['mytheme_form_nonce'], 'mytheme_form_nonce' ) ) {
             die( 'CSRF token invalid' );
         }
