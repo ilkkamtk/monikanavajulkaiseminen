@@ -38,7 +38,20 @@ and [iThemes Security](https://wordpress.org/plugins/better-wp-security/).
 
 ## [Theme and Plugin Development Security](https://developer.wordpress.org/apis/security/)
 
-1. Sanitize and Validate User Input
+1. ABSPATH
+   - Always use the `ABSPATH` constant to prevent direct access to your theme or plugin files. This constant defines the
+   absolute path to the WordPress directory.
+   - Here is an example of how to use the `ABSPATH` constant:
+
+    ```php
+    <?php
+        if ( ! defined( 'ABSPATH' ) ) {
+            exit;
+        }
+    ?>
+    ```
+
+2. Sanitize and Validate User Input
    - Always [sanitize](https://developer.wordpress.org/apis/security/sanitizing/) and [validate](https://developer.wordpress.org/apis/security/data-validation/) user input to prevent SQL injection, XSS attacks, and other security vulnerabilities.
    - You can use the `sanitize_text_field`, `sanitize_email`, and `sanitize_url` functions to sanitize user input.
    - Here is an example of how to sanitize user input:
@@ -71,7 +84,7 @@ and [iThemes Security](https://wordpress.org/plugins/better-wp-security/).
         }
     ?>
     ```
-2. Use Escaping Functions
+3. Use Escaping Functions
     - Use [escaping](https://developer.wordpress.org/apis/security/escaping/) functions like `esc_html`, `esc_attr`, `esc_url`, and `esc_js` to prevent XSS attacks.
     - Here is an example of how to use the `esc_html` function:
 
@@ -82,7 +95,7 @@ and [iThemes Security](https://wordpress.org/plugins/better-wp-security/).
     ?>
     ```
       
-3. Use Nonces
+4. Use Nonces
    - [Nonces](https://developer.wordpress.org/apis/security/nonces/) are security tokens that help prevent CSRF attacks. Make sure you are using nonces in your forms and AJAX requests.
    - You can generate a nonce using the `wp_create_nonce` function and verify it using the `wp_verify_nonce` function.
    - Here is an example of how to use a nonce in a form:

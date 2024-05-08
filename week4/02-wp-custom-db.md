@@ -191,7 +191,7 @@ However, if you are not making a plugin and just want to create a table, you can
 
 ### Simple plugin for liking posts
 
-Here is an example of a simple plugin that adds a like button to posts with shortcode. It sends the data with a form and adds the like to the database without JavaScript.
+Here is an example of a simple plugin that adds a like button to posts with [shortcode](https://developer.wordpress.org/apis/shortcode/). It sends the data with a form and adds the like to the database.
 
 Save the following to a file called `like-button.php` in the `wp-content/plugins/like-button` directory:
 
@@ -281,8 +281,6 @@ function add_like() {
 	wp_redirect( $_SERVER['HTTP_REFERER'] );
 	exit;
 }
-
-// add_action( 'wp_ajax_add_like', 'add_like' );
 
 add_action( 'admin_post_add_like', 'add_like' );
 
