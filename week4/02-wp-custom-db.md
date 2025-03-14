@@ -4,7 +4,7 @@ WordPress is made with PHP, so you could use PDO or mysqli to make custom databa
 
 ## global $wpdb
 
-WordPress has a global variable called `$wpdb`. This variable is an instance of the `wpdb` class. You can use this variable to get data from the database. 
+WordPress has a global variable called `$wpdb`. This variable is an instance of the `wpdb` class. You can use this variable to get data from the database.
 
 ---
 
@@ -24,7 +24,7 @@ $results = $wpdb->get_results( "SELECT * FROM {$wpdb->prefix}posts" );
 
 When creating your own tables in WordPress, name them with the same prefix as the default WordPress tables. This way you can use the `$wpdb-prefix`, and also you can be sure that your table names are unique.
 
---- 
+---
 
 ## %s and %d
 
@@ -50,7 +50,7 @@ foreach ( $results as $result ) {
 
 ```
 
-### Prepare 
+### Prepare
 
 You should use the `prepare` method when using variables in your queries. This is to prevent SQL injection attacks. Here is an example of how to use the `prepare` method:
 
@@ -238,8 +238,8 @@ function like_button() {
     $results = $wpdb->get_results( "SELECT * FROM $table_name WHERE post_id = $post_id" );
 
     $likes = count( $results );
-    
-    
+
+
     $output = '<form id="like-form" method="post" action="'. admin_url( 'admin-post.php' ) .'">';
     $output .= '<input type="hidden" name="action" value="add_like">';
     $output .= '<input type="hidden" name="post_id" value="' . $post_id . '">';
@@ -277,17 +277,17 @@ function add_like() {
         echo 'Error adding like';
     }
 
-    
-	wp_redirect( $_SERVER['HTTP_REFERER'] );
-	exit;
+
+   wp_redirect( $_SERVER['HTTP_REFERER'] );
+   exit;
 }
 
 add_action( 'admin_post_add_like', 'add_like' );
 
 // enqueue icons
 function my_theme_load_ionicons_font() {
-	// Load Ionicons font from CDN
-	wp_enqueue_script( 'my-theme-ionicons', 'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js', array(), '5.2.3', true );
+   // Load Ionicons font from CDN
+   wp_enqueue_script( 'my-theme-ionicons', 'https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js', array(), '5.2.3', true );
 }
 
 add_action( 'wp_enqueue_scripts', 'my_theme_load_ionicons_font' );
@@ -296,7 +296,7 @@ add_action( 'wp_enqueue_scripts', 'my_theme_load_ionicons_font' );
 
 Here is how you can use the shortcode in your posts:
 
-```
+```text
 [like_button]
 ```
 

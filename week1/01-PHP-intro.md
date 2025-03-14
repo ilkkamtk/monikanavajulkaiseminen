@@ -132,7 +132,7 @@
 
   - The output will be:
 
-    ```
+    ```text
     Variable x inside function is:
     Variable y inside function is: 10
     Variable x outside function is: 5

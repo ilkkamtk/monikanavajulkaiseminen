@@ -2,6 +2,10 @@
 
 ## Table of contents
 
+### Group assignment
+
+- [Wireframes](ryhmätehtävä/kuvaus.md)
+
 ### Week 1
 
 - [PHP - Intro](week1/01-PHP-intro.md)
@@ -16,10 +20,9 @@
 
 ### Week 3
 
-- [PHP - Practical exercise](week3/01-pracical-assignment.md) 
+- [PHP - Practical exercise](week3/01-pracical-assignment.md)
 - [PHP - Authentication and Authorization](week3/02-auth.md)
 - [PHP - OOP](week3/03-oop.md)
-
 
 ### Week 4
 

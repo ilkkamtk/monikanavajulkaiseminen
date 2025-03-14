@@ -1,10 +1,10 @@
 # PHP - Authentication and Authorization
 
-#### Authentication
+## Authentication
 
 Authentication is the process of verifying the identity of a user. It is the process of determining whether someone or something is, in fact, who or what it is declared to be.
 
-#### Authorization
+## Authorization
 
 Authorization is the process of determining whether a user has permission to perform a specific action. It is the process of granting or denying access to a network resource.
 
@@ -35,6 +35,7 @@ if ($is_not_authenticated) {
 
 ?>
 ```
+
 In the above example, we are checking if the user has supplied credentials. If the user has not supplied credentials or the credentials are incorrect, we return a 401 status code and a `WWW-Authenticate` header with the value `Basic realm="Access denied"`.
 
 Basic authentication should be used only in personal sites or sites that do not require high security. It is not recommended for production sites.
@@ -102,5 +103,3 @@ In the secret page, we check if the user information is stored in the session. I
 ## Assignment
 
 Add session based authentication and authorization to your application. As a user you are able to add/modify/delete your own media items. As an admin you are able to add/modify/delete all media items.
-
-

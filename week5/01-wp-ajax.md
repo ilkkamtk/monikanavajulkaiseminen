@@ -12,8 +12,8 @@ The `wp_enqueue_script` function is used to include JavaScript files in your the
 
 ```php
 function mytheme_enqueue_scripts(): void {
-    wp_register_script( 
-       'my-script', 
+    wp_register_script(
+       'my-script',
        get_template_directory_uri() . '/js/myScript.js',
        [],
        '1.0',
@@ -30,8 +30,8 @@ Also use the `wp_enqueue_style` function to include CSS files in your theme. Her
 
 ```php
 function mytheme_enqueue_styles(): void {
-    wp_register_style( 
-       'my-style', 
+    wp_register_style(
+       'my-style',
        get_template_directory_uri() . '/css/myStyle.css',
        [],
        '1.0',
@@ -56,7 +56,7 @@ To use the built-in AJAX functionality in WordPress, you need to use the `wp_aja
 add_action( 'wp_ajax_single_post', 'single_post' );
 
 function single_post(): void {
-	header( 'Content-Type: application/json' );
+    header( 'Content-Type: application/json' );
     $post_id = $_POST['post_id'];
     $post    = get_post( $post_id );
     echo json_encode( $post );
@@ -68,20 +68,20 @@ In WordPress all AJAX requests are sent to the `admin-ajax.php` file:
 
 ```javascript
 const myAJAXFunction = async () => {
-    const url = singlePost.ajax_url;
-    const data = new URLSearchParams({
-            action: 'single_post',
-            post_id: 1,
-        });
-    const response = await fetch(url, {
-        method: 'POST',
-        body: data,
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-    });
-    const post = await response.json();
-    console.log(post);
+  const url = singlePost.ajax_url;
+  const data = new URLSearchParams({
+    action: 'single_post',
+    post_id: 1,
+  });
+  const response = await fetch(url, {
+    method: 'POST',
+    body: data,
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  });
+  const post = await response.json();
+  console.log(post);
 };
 
 myAJAXFunction();
@@ -91,18 +91,17 @@ The `singlePost` object is created in the `functions.php` file:
 
 ```php
 function mytheme_enqueue_scripts(): void {
-	wp_register_script( 'single-post', get_template_directory_uri() . '/js/singlePost.js', [], '1.0', true );
-	$script_data = array(
-		'ajax_url' => admin_url( 'admin-ajax.php' ),
-	);
-	wp_localize_script( 'single-post', 'singlePost', $script_data );
-	wp_enqueue_script( 'single-post' );
+    wp_register_script( 'single-post', get_template_directory_uri() . '/js/singlePost.js', [], '1.0', true );
+    $script_data = array(
+        'ajax_url' => admin_url( 'admin-ajax.php' ),
+    );
+    wp_localize_script( 'single-post', 'singlePost', $script_data );
+    wp_enqueue_script( 'single-post' );
 }
 add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_scripts' );
 ```
 
 The `wp_localize_script` function is used to pass data from PHP to JavaScript. In this case, we are passing the `ajax_url` to the JavaScript file in the `singlePost` object.
-
 
 All AJAX requests should be handled by the `admin-ajax.php` file. The reason for this is that the `admin-ajax.php` file is the only file that is guaranteed to be loaded when an AJAX request is made. This is because the `admin-ajax.php` file is loaded by WordPress itself. If you create your own AJAX handler file, there is no guarantee that the file will be loaded when an AJAX request is made.
 
@@ -113,4 +112,3 @@ All AJAX requests should be handled by the `admin-ajax.php` file. The reason for
 Use the examples above and modify your template so that single posts are loaded using AJAX and displayed in a modal window using `<dialog>` element.
 
 Also convert the like button plugin to update likes using AJAX without reloading the page.
-

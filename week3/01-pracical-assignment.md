@@ -1,4 +1,5 @@
 # Assignment
+
 Use the `MediaItems` table from the previous course and create a PHP application that allows you to insert, update, select, and delete records from the table using PDO and prepared statements.
 
 You need a form for inserting and updating records and a html table for selecting and deleting records.
@@ -11,7 +12,7 @@ Add a modal for updating records. When you click an edit button, the modal opens
 
 ---
 
-### File uploads in PHP
+## File uploads in PHP
 
 To upload files in PHP, you need to use the `$_FILES` superglobal. The `$_FILES` superglobal is an associative array that contains information about uploaded files. The array contains the following elements:
 
@@ -25,9 +26,9 @@ Here is an example of a simple file upload form:
 
 ```html
 <form action="upload.php" method="post" enctype="multipart/form-data">
-    Select image to upload:
-    <input type="file" name="file" id="file">
-    <input type="submit" value="Upload Image" name="submit">
+  Select image to upload:
+  <input type="file" name="file" id="file" />
+  <input type="submit" value="Upload Image" name="submit" />
 </form>
 ```
 
@@ -63,6 +64,7 @@ if ( move_uploaded_file( $tmp_name, $destination ) ) {
 
 ?>
 ```
+
 - The `enctype="multipart/form-data"` attribute is required when you are using forms that have a file upload control.
 - The `move_uploaded_file()` function moves an uploaded file to a new location. It returns `true` on success and `false` on failure.
 - Note that the example above is quite insecure. You should always validate and sanitize user input before using it in your application. For example, you should check the file type and size before moving the file to the server.
