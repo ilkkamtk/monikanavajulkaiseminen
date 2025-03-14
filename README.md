@@ -6,6 +6,7 @@
 
 - [Tekstisisältö](https://docs.google.com/document/d/1XX0kbMrdFJBRXiGMs9af9WVs7ZFI1ne9j6HP4cfVnbQ/edit?usp=sharing)
 - [Wireframes](ryhmätehtävä/kuvaus.md)
+- [Kuvat](ryhmätehtävä/images.zip)
 
 ### Week 1
 
