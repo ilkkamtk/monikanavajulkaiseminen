@@ -67,8 +67,7 @@
   - [XAMPP](https://www.apachefriends.org/download.html), [MAMP](https://www.mamp.info/en/downloads/) etc.
 - **Metropolia server**
   - [Instructions](https://metropoliafi-my.sharepoint.com/:v:/g/personal/ilkkamtk_metropolia_fi/EQxwMIi9hJlLi_675cMc2hgBy858Xt0qwVSmIK8d7YCAfA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=XiWJOI)
-- **Official guide:
-  ** [WordPress Codex](https://developer.wordpress.org/advanced-administration/before-install/howto-install/)
+- **Official guide:** [WordPress Codex](https://developer.wordpress.org/advanced-administration/before-install/howto-install/)
 - **Download** WordPress from [fi.wordpress.org](https://fi.wordpress.org/) for Finnish version
   or [wordpress.org](https://wordpress.org/) for English version.
 - **Installation**
