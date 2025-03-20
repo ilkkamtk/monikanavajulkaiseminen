@@ -134,7 +134,7 @@ wp_reset_postdata();
    not in your WordPress installation.
    - The zip file contains `index.html` and `style.css` files and some images.
 2. Create `index.php` file in your theme folder and copy the content of `index.html` to `index.php`.
-3. Also copy the `images` folder to your theme folder and the content of `style.css` to your `style.css` file.
+3. Also copy the images to your theme folder and the content of `style.css` to your `style.css` file.
 4. Create `header.php`, `footer.php` and `sidebar.php` files in your theme folder and move the elements you think are
    repeating and belong to those files from `index.php` to the new files.
 5. Use `get_header()`, `get_footer()` and `get_sidebar()` functions in `index.php` to include the files.
