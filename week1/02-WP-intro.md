@@ -105,7 +105,7 @@ testing the update on a development environment.
 
 - `.htaccess` on Metropolia's server to allow file uploads:
 
-  - You need to create a `.htaccess` file with a proper editor (like Visual Studio Code, etc.)
+  - You need to create a `.htaccess` file with a proper editor (like Visual Studio Code, etc.). Add the following line to .htaccess:
 
     ```apacheconfig
     AddHandler cgi-script .php
