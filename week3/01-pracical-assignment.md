@@ -1,6 +1,6 @@
 # Assignment
 
-Use the `MediaItems` table from the previous course and create a PHP application that allows you to insert, update, select, and delete records from the table using PDO and prepared statements.
+Use the `MediaItems` table from the [previous course](https://github.com/mattpe/ucad/blob/main/assets/media-db.sql) and create a PHP application that allows you to insert, update, select, and delete records from the table using PDO and prepared statements.
 
 You need a form for inserting and updating records and a html table for selecting and deleting records.
 
