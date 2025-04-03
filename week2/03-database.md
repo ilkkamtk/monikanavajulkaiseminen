@@ -110,7 +110,7 @@ Prepared statement in MySQL represents a SQL statement template to be executed. 
 
   $sql = "INSERT INTO users (name, email, age) VALUES (:name, :email, :age)";
 
-  $data = array('name' => $name, 'email' => $email, 'age' => $age);
+  $data = array('email' => $email, 'age' => $age, 'name' => $name);
 
   try {
     $STH = $DBH->prepare($sql);
