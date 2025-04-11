@@ -68,6 +68,8 @@ http://localhost/folder/getMediaItems.php?type='UNION SELECT null, username, pas
 
 **To prevent SQL injection, you should use prepared statements and validate user input before interacting with the database.**
 
+**[SQL injection cheat sheet](https://www.invicti.com/blog/web-security/sql-injection-cheat-sheet/)**
+
 ---
 
 ### Cross-Site Scripting (XSS)
