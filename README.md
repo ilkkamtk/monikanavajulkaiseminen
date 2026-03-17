@@ -37,11 +37,13 @@
 
 ### Week 6
 
-### Week 7
 - [WordPress AJAX](week5/01-wp-ajax.md)
 - [WordPress security](week5/02-wp-security.md)
 
-### Week 8
+### Week 7
 
 - [Adobe After Effects](https://oma.metropolia.fi)
 - [Bodymovin](https://oma.metropolia.fi)
+
+### Week 8
+- Esittely + varalla
