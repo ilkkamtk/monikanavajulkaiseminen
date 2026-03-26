@@ -8,7 +8,7 @@ Start by creating the html table and the form for inserting records. Then create
 
 Use existing user_id and hard code into the form as a hidden field for inserting, updating and deleting records. Also add a couple existing filenames to the form as a dropdown list or similar, so you don't have to manually input the filenames every time.
 
-Add a modal for updating records. When you click an edit button, the modal opens with the existing data in the form fields. When you click the update button, the modal closes and the record is updated.
+Add optional modal for updating records. When you click an edit button, the modal opens with the existing data in the form fields. When you click the update button, the modal closes and the record is updated.
 
 ---
 
